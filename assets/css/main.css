@@ -1,0 +1,20 @@
+/* Main CSS Bundle */
+@import url('global.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('style.css');
+@import url('slider.css');
+@import url('about.css');
+@import url('services.css');
+@import url('projects.css');
+@import url('news.css');
+@import url('team.css');
+@import url('testimonial.css');
+@import url('contact.css');
+@import url('faq.css');
+@import url('choose.css');
+@import url('process.css');
+@import url('pricing.css');
+@import url('cta.css');
+@import url('page-title.css');
+@import url('dark-body.css');
