@@ -1,0 +1,413 @@
+/* Induxt Industry Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	About One
+====================================================================
+
+***/
+
+.about-one {
+    position: relative;
+    padding: 110px 0px 80px;
+}
+
+.about-one .side-icon {
+    position: absolute;
+    right: 80px;
+    bottom: 0px;
+}
+
+.about-one_image-column {
+    position: relative;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.about-one_image-outer {
+    position: relative;
+}
+
+.about-one_image {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.about-one_image img {
+    position: relative;
+    width: 100%;
+    display: block;
+    -webkit-mask-image: url(../images/resource/about-1-1.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../images/resource/about-1-1.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.about-one_image-two {
+    position: absolute;
+    left: -130px;
+    bottom: 0px;
+    overflow: hidden;
+    border-radius: 30px;
+    display: inline-block;
+    border: 20px solid var(--white-color);
+}
+
+.about-one_experiance {
+    position: relative;
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    margin-right: 40px;
+    padding-left: 100px;
+    display: inline-block;
+    color: var(--color-two);
+}
+
+.about-one_experiance-count {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--main-color);
+    font-family: "Alexandria", sans-serif;
+}
+
+.about-one_authors {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    justify-content: end;
+}
+
+.about-one_authors li {
+    position: relative;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    margin-left: -30px;
+    border-radius: 100px;
+    border: 3px solid var(--white-color);
+}
+
+.about-one_authors li:first-child {
+    margin-left: 0px;
+}
+
+.about-one_bold {
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 25px;
+    color: var(--black-color);
+}
+
+.about-one_text {
+    position: relative;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 40px;
+    color: var(--color-three);
+}
+
+.about-one_image-three {
+    position: relative;
+}
+
+.about-one_image-three:before {
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: -10px;
+    right: -10px;
+    bottom: 10px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+.about-one_image-three img {
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.about-one_count {
+    position: relative;
+    font-size: 18px;
+    padding-left: 95px;
+    font-family: "Alexandria", sans-serif;
+}
+
+.about-one_count .count {
+    position: relative;
+    font-weight: 800;
+    font-size: 48px;
+    color: var(--main-color);
+}
+
+.about-one_count .icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    line-height: 1em;
+    font-size: 80px;
+    font-weight: 400;
+    color: var(--color-two);
+    font-family: "flaticon_induxt";
+}
+
+.about-one_btn {
+    position: relative;
+    margin-top: 30px;
+}
+
+/*** 
+
+====================================================================
+	About Two
+====================================================================
+
+***/
+
+.about-two {
+    position: relative;
+    padding: 110px 0px 0px;
+}
+
+.about-two .sec-title {
+    margin-bottom: 0px;
+}
+
+.about-two .side-icon {
+    position: absolute;
+    right: 60px;
+    top: 90px;
+    -webkit-animation: icon-bounce 0.8s ease-out infinite;
+    animation: icon-bounce 0.8s ease-out infinite;
+}
+
+.about-two_title-column {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about-two_title-outer {
+    position: relative;
+}
+
+.about-two_count {
+    position: relative;
+    font-size: 18px;
+    padding-right: 140px;
+    display: inline-block;
+    font-family: "Alexandria", sans-serif;
+}
+
+.about-two_count .count {
+    position: relative;
+    font-size: 300px;
+    line-height: 1em;
+    color: transparent;
+    font-weight: 800;
+    -webkit-text-stroke-width: 2px;
+    font-family: "Raleway", sans-serif;
+    -webkit-text-stroke-color: rgba(var(--main-color-rgb), 1);
+}
+
+.about-two_count sup {
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    font-size: 22px;
+    line-height: 32px;
+    color: var(--color-three);
+}
+
+.about-two_title {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.about-two_text {
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.about-two_image-column {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.about-two_image-outer {
+    position: relative;
+}
+
+.about-two_image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.about-two_image img {
+    position: relative;
+    width: 100%;
+    display: block;
+    -webkit-mask-image: url(../images/resource/about-2-1.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../images/resource/about-2-1.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.about-two_list {
+    position: relative;
+}
+
+.about-two_list li {
+    position: relative;
+    font-size: 18px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.about-two_list li:before {
+    position: absolute;
+    content: '\f560';
+    left: 0px;
+    top: 0px;
+    font-weight: 800;
+    color: var(--main-color);
+    font-family: 'Font Awesome 6 Free';
+}
+
+.about-two_list li:last-child {
+    margin-bottom: 0px;
+}
+
+.about-two_more {
+    position: relative;
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: end;
+    padding-bottom: 10px;
+    display: inline-block;
+    color: var(--color-two);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-two);
+}
+
+.about-two_more span {
+    position: relative;
+    top: 3px;
+    font-weight: 800;
+    line-height: 1em;
+    margin-left: 10px;
+    font-family: "flaticon_induxt";
+}
+
+.about-two_more:hover {
+    color: var(--main-color);
+}
+
+.about-two_image-two {
+    position: relative;
+    overflow: hidden;
+    padding: 0px 40px;
+    margin-top: 50px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.about-two_image-two img {
+    position: relative;
+    width: 100%;
+    display: block;
+    -webkit-mask-image: url(../images/resource/about-2-2.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../images/resource/about-2-2.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+/*** 
+
+====================================================================
+	About Three
+====================================================================
+
+***/
+
+.about-three {
+    position: relative;
+    padding: 0px 0px 0px;
+}
+
+.about-three.style-two {
+    padding-bottom: 110px;
+}
+
+.about-three_image {
+    position: relative;
+}
+
+.about-three_image img {
+    position: relative;
+    width: 100%;
+    display: block;
+    -webkit-mask-image: url(../images/resource/about-3-1.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../images/resource/about-3-1.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.about-three_image-two {
+    position: relative;
+}
+
+.about-three_image-two img {
+    position: relative;
+    width: 100%;
+    display: block;
+    -webkit-mask-image: url(../images/resource/about-3-2.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../images/resource/about-3-2.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.about-three_content {
+    position: relative;
+    padding-top: 30px;
+}
+
+.about-three_text {
+    position: relative;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.about-three_button {
+    position: relative;
+    margin-top: 30px;
+}

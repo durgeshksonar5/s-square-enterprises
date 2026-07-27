@@ -1,0 +1,69 @@
+/* Induxt Industry Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	CTA One
+====================================================================
+
+***/
+
+.cta-one {
+    position: relative;
+    margin-top: -120px;
+}
+
+.cta-one .inner-container {
+    position: relative;
+    padding: 210px 0px 90px;
+}
+
+.cta-one .inner-container:before {
+    position: absolute;
+    content: '';
+    right: -1px;
+    bottom: -2px;
+    width: 219px;
+    height: 75px;
+    z-index: 2;
+    -webkit-mask: url(../images/icons/vector-2.png) no-repeat center/contain;
+    mask: url(../images/icons/vector-2.png) no-repeat center/contain;
+    background-color: #ffffff;
+}
+
+.cta-one_pattern {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 180%;
+}
+
+.cta-one .content {
+    position: relative;
+    gap: 30px;
+    padding-right: 120px;
+}
+
+.cta-one_count {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.cta-one_count .count {
+    position: relative;
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--white-color);
+}
+
+.cta-one_text {
+    position: relative;
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--white-color);
+}

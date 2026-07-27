@@ -1,0 +1,95 @@
+/* Induxt Industry Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	Counter One
+====================================================================
+
+***/
+
+.counter-one {
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.counter-one_title-column {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.counter-one_title-outer {
+    position: relative;
+    padding-right: 100px;
+}
+
+.counter-one_button {
+    position: relative;
+}
+
+.counter-one_counter-column {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.counter-one_counter-outer {
+    position: relative;
+}
+
+.counter-block_one {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.counter-block_one-inner {
+    position: relative;
+    padding: 10px 10px;
+    min-height: 170px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.counter-block_one-content {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 250px;
+    min-height: 150px;
+}
+
+.counter-block_one-icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 200px;
+    height: 150px;
+    font-size: 80px;
+    line-height: 150px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    font-family: "flaticon_induxt";
+}
+
+.counter-block_one-inner:hover .counter-block_one-icon {
+    transform: rotateY(180deg);
+    background-color: var(--color-two);
+}
+
+.counter-block_one-count {
+    position: relative;
+    font-size: 60px;
+    line-height: 1em;
+    font-weight: 700;
+    color: var(--color-two);
+}
+
+.counter-block_one-text {
+    position: relative;
+    font-size: 18px;
+    line-height: 1em;
+    font-weight: 500;
+    margin-top: 10px;
+    color: var(--color-two);
+}

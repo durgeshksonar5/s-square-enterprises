@@ -1,0 +1,144 @@
+/* Induxt Industry Business HTML-5 Template */
+
+/*** 
+
+====================================================================
+	Video One
+====================================================================
+
+***/
+
+.video-one {
+    position: relative;
+}
+
+.video-one .video-one_outer {
+    position: relative;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.video-one .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.video-one .image img {
+    position: relative;
+    width: 100%;
+    display: block;
+    display: block;
+    -webkit-mask-image: url(../images/resource/video-1-1.png);
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(../images/resource/video-1-1.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.video-one_play {
+    position: absolute;
+    right: 150px;
+    top: 180px;
+    z-index: 10;
+    font-size: 34px;
+    color: var(--white-color);
+    font-family: "Alexandria", sans-serif;
+}
+
+.video-one_play strong {
+    position: relative;
+    z-index: 10;
+    font-weight: 400;
+}
+
+.video-one_play span {
+    position: relative;
+    width: 150px;
+    right: -25px;
+    height: 150px;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 50%;
+    padding-left: 4px;
+    line-height: 150px;
+    display: inline-block;
+    color: var(--white-color);
+    font-family: "flaticon_induxt";
+    background-color: var(--color-two);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
+    -webkit-animation: icon-bounce 0.8s ease-out infinite;
+    animation: icon-bounce 0.8s ease-out infinite;
+    border-left: 8px solid var(--main-color);
+}
+
+.video-one_play .ripple,
+.video-one_play .ripple:before,
+.video-one_play .ripple:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -ms-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -o-box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .6);
+    -webkit-animation: ripple 3s infinite;
+    -moz-animation: ripple 3s infinite;
+    -ms-animation: ripple 3s infinite;
+    -o-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+}
+
+.video-one_play .ripple:before {
+    -webkit-animation-delay: .9s;
+    -moz-animation-delay: .9s;
+    -ms-animation-delay: .9s;
+    -o-animation-delay: .9s;
+    animation-delay: .9s;
+    content: "";
+    position: absolute;
+}
+
+.video-one_play .ripple:after {
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s;
+    -ms-animation-delay: .6s;
+    -o-animation-delay: .6s;
+    animation-delay: .6s;
+    content: "";
+    position: absolute;
+}
+
+@-webkit-keyframes ripple {
+    70% {
+        box-shadow: 0 0 0 70px rgba(253, 167, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(253, 167, 0, 0);
+    }
+}
+
+@keyframes ripple {
+    70% {
+        box-shadow: 0 0 0 70px rgba(253, 167, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(253, 167, 0, 0);
+    }
+}
