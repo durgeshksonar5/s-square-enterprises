@@ -1411,3 +1411,69 @@ img {
     margin-top: -10px;
     margin-bottom: 25px;
 }
+.cursor, .cursor-follower { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+
+/* S-Square Logo Sizing Rules */
+.main-header .logo img,
+.nav-logo img,
+.main-footer_logo img,
+.logo-box .logo img,
+.header-lower .logo img {
+    max-height: 55px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+}
+
+@media (max-width: 767px) {
+    .main-header .logo img,
+    .nav-logo img {
+        max-height: 45px !important;
+    }
+}
+
+/* Perfect Pill Button & Arrow Icon Rendering Fix */
+.theme-btn.btn-style-one,
+.theme-btn.btn-style-two {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 50px !important;
+    padding: 6px 6px 6px 28px !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+
+.theme-btn .btn-wrap {
+    position: relative !important;
+    z-index: 2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+    float: none !important;
+}
+
+.theme-btn .btn-wrap .text-one,
+.theme-btn .btn-wrap .text-two {
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+}
+
+.theme-btn i {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    line-height: 42px !important;
+    border-radius: 50% !important;
+    margin-left: 12px !important;
+    flex-shrink: 0 !important;
+    text-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}

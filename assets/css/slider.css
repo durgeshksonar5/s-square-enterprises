@@ -919,3 +919,174 @@
     content: "";
     position: absolute;
 }
+/* Single Hero Static Banner Rules */
+.single-hero-banner .swiper-slide {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.single-hero-banner .slider-one_title,
+.single-hero-banner .slider-one_heading,
+.single-hero-banner .slider-one_text,
+.single-hero-banner .slider-one_button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Hero Section Display Fixes */
+.slider-one .slider-one_image-layer,
+.main-slider .slider-one_image-layer {
+    opacity: 1 !important;
+    clip-path: none !important;
+    z-index: 1 !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+.slider-one_image-layer:before {
+    opacity: 0.65 !important;
+    background-color: #0d1117 !important;
+}
+
+.slider-one_big-title {
+    z-index: 1 !important;
+    opacity: 0.08 !important;
+    pointer-events: none !important;
+}
+
+.slider-one .swiper-slide,
+.main-slider .swiper-slide {
+    position: relative;
+    padding: 240px 0px 180px;
+}
+
+
+
+/* Pristine Hero Button & Hover Animation */
+.slider-one_button,
+.single-hero-banner .slider-one_button {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;
+    overflow: visible !important;
+}
+
+.theme-btn.btn-style-two {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 6px 6px 28px !important;
+    background-color: var(--main-color) !important;
+    color: #ffffff !important;
+    border-radius: 50px !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.theme-btn.btn-style-two:before {
+    content: '' !important;
+    position: absolute !important;
+    top: -200% !important;
+    left: 50% !important;
+    width: 220% !important;
+    height: 220% !important;
+    background-color: #ffffff !important;
+    border-radius: 50% !important;
+    transform: translateX(-50%) !important;
+    transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    z-index: -1 !important;
+}
+
+.theme-btn.btn-style-two:hover:before {
+    top: -40% !important;
+}
+
+.theme-btn.btn-style-two .btn-wrap {
+    position: relative !important;
+    display: block !important;
+    height: 46px !important;
+    line-height: 46px !important;
+    overflow: hidden !important;
+}
+
+.theme-btn.btn-style-two .btn-wrap .text-one {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+    transform: translateY(0%) !important;
+    opacity: 1 !important;
+}
+
+.theme-btn.btn-style-two:hover .btn-wrap .text-one {
+    transform: translateY(-120%) !important;
+    opacity: 0 !important;
+}
+
+.theme-btn.btn-style-two .btn-wrap .text-two {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    color: var(--black-color, #0f172a) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+    transform: translateY(120%) !important;
+    opacity: 0 !important;
+}
+
+.theme-btn.btn-style-two:hover .btn-wrap .text-two {
+    transform: translateY(0%) !important;
+    opacity: 1 !important;
+}
+
+.theme-btn.btn-style-two i {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin-left: 16px !important;
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    font-size: 14px !important;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease !important;
+}
+
+.theme-btn.btn-style-two:hover i {
+    background-color: var(--main-color) !important;
+    color: #ffffff !important;
+    transform: rotate(45deg) !important;
+}
+
+/* Hero Section Extra Bottom Space Removal */
+.slider-one .swiper-slide,
+.main-slider .swiper-slide,
+.single-hero-banner .swiper-slide {
+    padding-top: 150px !important;
+    padding-bottom: 60px !important;
+}
+
+.slider-one,
+.main-slider,
+.single-hero-banner {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}

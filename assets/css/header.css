@@ -2130,3 +2130,24 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     position: relative;
     display: none;
 }
+/* S-Square Logo Sizing Rules */
+.main-header .logo img,
+.nav-logo img,
+.main-footer_logo img,
+.logo-box .logo img,
+.header-lower .logo img {
+    max-height: 55px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+}
+
+@media (max-width: 767px) {
+    .main-header .logo img,
+    .nav-logo img {
+        max-height: 45px !important;
+    }
+}
+
+/* Search Bar Removal */
+.search-box-btn, .search-box-outer, .search-popup { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
