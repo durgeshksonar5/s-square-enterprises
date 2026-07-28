@@ -1,87 +1,3 @@
-/* --- nav-tool.js --- */
-"use strict";
-jQuery, jQuery(document).ready(function(o) {
-    0 < o(".offset-side-bar").length && o(".offset-side-bar").on("click", function(e) {
-        e.preventDefault(), e.stopPropagation(), o(".cart-group").addClass("isActive")
-    }), 0 < o(".close-side-widget").length && o(".close-side-widget").on("click", function(e) {
-        e.preventDefault(), o(".cart-group").removeClass("isActive")
-    }), 0 < o(".navSidebar-button").length && o(".navSidebar-button").on("click", function(e) {
-        e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive")
-    }), 0 < o(".close-side-widget").length && o(".close-side-widget").on("click", function(e) {
-        e.preventDefault(), o(".info-group").removeClass("isActive")
-    }), o("body").on("click", function(e) {
-        o(".info-group").removeClass("isActive"), o(".cart-group").removeClass("isActive")
-    }), o(".xs-sidebar-widget").on("click", function(e) {
-        e.stopPropagation()
-    }), 0 < o(".xs-modal-popup").length && o(".xs-modal-popup").magnificPopup({
-        type: "inline",
-        fixedContentPos: !1,
-        fixedBgPos: !0,
-        overflowY: "auto",
-        closeBtnInside: !1,
-        callbacks: {
-            beforeOpen: function() {
-                this.st.mainClass = "my-mfp-slide-bottom xs-promo-popup"
-            }
-        }
-    })
-});
-;
-/* --- element-in-view.js --- */
-(function($) {
-
-    /**
-     * Copyright 2012, Digital Fusion
-     * Licensed under the MIT license.
-     * http://teamdf.com/jquery-plugins/license/
-     *
-     * @author Sam Sehnert
-     * @desc A small plugin that checks whether elements are within
-     *     the user visible viewport of a web browser.
-     *     only accounts for vertical position, not horizontal.
-     */
-
-    $.fn.visible = function(partial) {
-
-        var $t = $(this),
-            $w = $(window),
-            viewTop = $w.scrollTop(),
-            viewBottom = viewTop + $w.height(),
-            _top = $t.offset().top,
-            _bottom = _top + $t.height(),
-            compareTop = partial === true ? _bottom : _top,
-            compareBottom = partial === true ? _top : _bottom;
-
-        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-    };
-
-})(jQuery);
-
-$(window).on('scroll', function() {
-
-    $(".fullwidth-one .image").each(function(i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-            el.addClass("now-in-view");
-        } else {
-            el.removeClass("now-in-view");
-        }
-    });
-
-});
-
-$(document).on('ready', function() {
-    $(".fullwidth-one .image").each(function(i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-            el.addClass("now-in-view");
-        } else {
-            el.removeClass("now-in-view");
-        }
-    });
-});
-;
 /* --- color-settings.js --- */
 (function($) {
     "use strict";
@@ -149,8 +65,37 @@ $(document).on('ready', function() {
     });
 
 
-}(jQuery));
-;
+}(jQuery));;
+
+/* --- nav-tool.js --- */
+"use strict";
+jQuery, jQuery(document).ready(function(o) {
+    0 < o(".offset-side-bar").length && o(".offset-side-bar").on("click", function(e) {
+        e.preventDefault(), e.stopPropagation(), o(".cart-group").addClass("isActive")
+    }), 0 < o(".close-side-widget").length && o(".close-side-widget").on("click", function(e) {
+        e.preventDefault(), o(".cart-group").removeClass("isActive")
+    }), 0 < o(".navSidebar-button").length && o(".navSidebar-button").on("click", function(e) {
+        e.preventDefault(), e.stopPropagation(), o(".info-group").addClass("isActive")
+    }), 0 < o(".close-side-widget").length && o(".close-side-widget").on("click", function(e) {
+        e.preventDefault(), o(".info-group").removeClass("isActive")
+    }), o("body").on("click", function(e) {
+        o(".info-group").removeClass("isActive"), o(".cart-group").removeClass("isActive")
+    }), o(".xs-sidebar-widget").on("click", function(e) {
+        e.stopPropagation()
+    }), 0 < o(".xs-modal-popup").length && o(".xs-modal-popup").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !1,
+        callbacks: {
+            beforeOpen: function() {
+                this.st.mainClass = "my-mfp-slide-bottom xs-promo-popup"
+            }
+        }
+    })
+});;
+
 /* --- script.js --- */
 (function($) {
 
@@ -543,7 +488,8 @@ $(document).on('ready', function() {
 
 
     // Main Slider
-    var slider = new Swiper('.main-slider', {
+    if ($('.main-slider .swiper-slide').length > 1) {
+        var slider = new Swiper('.main-slider', {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
@@ -588,6 +534,7 @@ $(document).on('ready', function() {
             },
         },
     });
+    }
 
 
 
@@ -688,43 +635,27 @@ $(document).on('ready', function() {
     // Testimonial Slider
     var slider = new Swiper('.testimonial_carousel', {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 30,
         loop: true,
         autoplay: {
             enabled: true,
-            delay: 6000
+            delay: 5000,
+            disableOnInteraction: false
         },
-        // Navigation arrows
         navigation: {
             nextEl: '.testimonial_carousel-next',
             prevEl: '.testimonial_carousel-prev',
             clickable: true,
         },
-        //Pagination
         pagination: {
             el: ".testimonial_carousel-pagination",
             clickable: true,
-            type: "fraction",
         },
-        speed: 500,
+        speed: 600,
         breakpoints: {
-            '1600': {
-                slidesPerView: 1,
-            },
-            '1200': {
-                slidesPerView: 1,
-            },
-            '992': {
-                slidesPerView: 1,
-            },
-            '768': {
-                slidesPerView: 1,
-            },
-            '576': {
-                slidesPerView: 1,
-            },
             '0': {
                 slidesPerView: 1,
+                spaceBetween: 20
             },
         },
     });
@@ -1352,5 +1283,5 @@ $(document).on('ready', function() {
         //handlePreloader();
     });
 
-})(window.jQuery);
-;
+})(window.jQuery);;
+
