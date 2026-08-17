@@ -13680,6 +13680,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     background-color: #ffffff;
 }
 
+.page-title h1,
 .page-title h2 {
     text-transform: uppercase;
     color: var(--white-color);
