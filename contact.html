@@ -283,8 +283,10 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <form method="post" action="sendemail.php" id="contact-form">
+                    <form method="post" action="https://leadsmanagment.hindustandigitalservices.com/api/forms/submit/354ab037-cc56-4407-9b07-64af27238989" id="contact-form">
                         <div class="row clearfix">
+                            <input type="hidden" name="buttonType" value="Contact form">
+                            <input type="hidden" name="formType" value="Contact form">
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                 <input type="text" name="username" placeholder="First Name" required>
                             </div>
@@ -295,16 +297,20 @@
                                 <input type="email" name="email" placeholder="Email address" required>
                             </div>
                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" name="services" placeholder="Services" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                <input type="text" name="services" placeholder="Services / Products Required" required>
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12">
                                 <textarea name="message" placeholder="Your Message"></textarea>
                             </div>
-                            <div class="form-group">
-                                <button class="theme-btn btn-style-one">
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                <div id="form-result" style="display: none; padding: 14px 20px; margin-bottom: 20px; border-radius: 6px; font-size: 15px; font-weight: 500; line-height: 1.5;"></div>
+                                <button type="submit" id="submit-btn" class="theme-btn btn-style-one">
                                     <span class="btn-wrap">
-                                        <span class="text-one">Submit Now <i class="fa-classic fa-solid fa-arrow-right"></i></span>
-                                        <span class="text-two">Submit Now <i class="fa-classic fa-solid fa-arrow-right"></i></span>
+                                        <span class="text-one" id="btn-text-one">Submit Now <i class="fa-classic fa-solid fa-arrow-right"></i></span>
+                                        <span class="text-two" id="btn-text-two">Submit Now <i class="fa-classic fa-solid fa-arrow-right"></i></span>
                                     </span>
                                 </button>
                             </div>
@@ -315,7 +321,7 @@
                 <!-- Map One -->
                 <div class="map-one">
                     <div class="auto-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.029!2d73.85!3d18.62!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a!2sBhosari%20Pune!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60492.320954902156!2d73.77582724589016!3d18.629409366026213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7004403843f%3A0x9cedcdb2d6509464!2sS%20Square%20Enterprises!5e0!3m2!1sen!2sin!4v1787403342962!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
 
@@ -445,43 +451,97 @@
 	</svg>
     </div>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-    
-
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var contactForm = document.getElementById('contact-form');
+            var formResult = document.getElementById('form-result');
+            var submitBtn = document.getElementById('submit-btn');
+            var btnTextOne = document.getElementById('btn-text-one');
+            var btnTextTwo = document.getElementById('btn-text-two');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    var formData = new FormData(contactForm);
+                    var firstName = (formData.get('username') || '').trim();
+                    var lastName = (formData.get('lastname') || '').trim();
+                    var email = (formData.get('email') || '').trim();
+                    var phone = (formData.get('phone') || '').trim();
+                    var services = (formData.get('services') || '').trim();
+                    var message = (formData.get('message') || '').trim();
+
+                    var fullName = [firstName, lastName].filter(Boolean).join(' ');
+
+                    var payload = {
+                        buttonType: 'Contact form',
+                        formType: 'Contact form',
+                        type: 'Contact form',
+                        name: fullName || firstName || 'Anonymous',
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        phone: phone,
+                        services: services,
+                        message: message
+                    };
+
+                    // Loading State
+                    if (submitBtn) submitBtn.disabled = true;
+                    if (btnTextOne) btnTextOne.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+                    if (btnTextTwo) btnTextTwo.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+                    if (formResult) {
+                        formResult.style.display = 'none';
+                        formResult.innerHTML = '';
+                    }
+
+                    fetch('https://leadsmanagment.hindustandigitalservices.com/api/forms/submit/354ab037-cc56-4407-9b07-64af27238989', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    })
+                    .then(function (response) {
+                        if (response.ok) {
+                            if (formResult) {
+                                formResult.style.display = 'block';
+                                formResult.style.backgroundColor = '#d4edda';
+                                formResult.style.color = '#155724';
+                                formResult.style.border = '1px solid #c3e6cb';
+                                formResult.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right: 8px;"></i> Thank you! Your inquiry has been sent successfully. We will get back to you shortly.';
+                            }
+                            contactForm.reset();
+                        } else {
+                            return response.json().then(function (data) {
+                                throw new Error(data && data.message ? data.message : 'Submission failed with status ' + response.status);
+                            }).catch(function (err) {
+                                throw new Error(err.message || 'Submission failed');
+                            });
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error('Contact form submission error:', error);
+                        if (formResult) {
+                            formResult.style.display = 'block';
+                            formResult.style.backgroundColor = '#f8d7da';
+                            formResult.style.color = '#721c24';
+                            formResult.style.border = '1px solid #f5c6cb';
+                            formResult.innerHTML = '<i class="fa-solid fa-circle-exclamation" style="margin-right: 8px;"></i> Failed to submit your message. Please try again or reach us at <a href="tel:+919881988789" style="color:#721c24;font-weight:700;text-decoration:underline;">+91 9881988789</a>.';
+                        }
+                    })
+                    .finally(function () {
+                        if (submitBtn) submitBtn.disabled = false;
+                        if (btnTextOne) btnTextOne.innerHTML = 'Submit Now <i class="fa-classic fa-solid fa-arrow-right"></i>';
+                        if (btnTextTwo) btnTextTwo.innerHTML = 'Submit Now <i class="fa-classic fa-solid fa-arrow-right"></i>';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
