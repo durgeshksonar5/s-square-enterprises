@@ -6277,11 +6277,15 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
 }
 
 .service-block_one-image img {
     position: relative;
     width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     display: block;
     border-radius: 20px;
     -webkit-mask-image: none !important;
