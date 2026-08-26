@@ -13776,14 +13776,15 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 
 .gallery-card_image {
     position: relative;
-    height: 220px;
+    height: 240px;
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 12px;
+    padding: 10px;
+    border-radius: 12px;
 }
 
 .gallery-card_image img {
