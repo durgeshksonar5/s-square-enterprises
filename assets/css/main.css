@@ -4890,7 +4890,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 
 .slider-one .swiper-slide {
     position: relative;
-    padding: 230px 0px 100px;
+    padding: 250px 0px 115px;
 }
 
 .slider-one_image-layer {
@@ -5045,7 +5045,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 500px;
+    top: 518px;
     z-index: 2;
     opacity: 0.20;
     font-size: 240px;
