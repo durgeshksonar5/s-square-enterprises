@@ -1,0 +1,5 @@
+# robots.txt for https://www.ssquareent.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ssquareent.com/sitemap.xml
