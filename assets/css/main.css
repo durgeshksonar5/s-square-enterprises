@@ -13665,8 +13665,10 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
 .page-title {
     position: relative;
     overflow: hidden;
-    padding: 320px 0px 150px;
+    padding: 250px 0px 115px;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .page-title .pattern-1 {
@@ -13677,6 +13679,8 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     bottom: 0px;
     background-position: left top;
     background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 1;
 }
 
 .page-title .pattern-2 {
@@ -13687,6 +13691,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     bottom: 0px;
     background-position: right top;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .page-title:before {
@@ -13696,7 +13701,7 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     bottom: 0px;
     width: 120px;
     height: 120px;
-    z-index: 1;
+    z-index: 2;
     /* background:url(../images/icons/vector-10.png) no-repeat; */
     -webkit-mask: url(../images/icons/vector-10.png) no-repeat center/contain;
     mask: url(../images/icons/vector-10.png) no-repeat center/contain;
@@ -13710,11 +13715,16 @@ html:not(.body-menu-opened) .hamburger .bottom-bun {
     bottom: 0px;
     width: 120px;
     height: 120px;
-    z-index: 1;
+    z-index: 2;
     /* background:url(../images/icons/vector-11.png) no-repeat; */
     -webkit-mask: url(../images/icons/vector-11.png) no-repeat center/contain;
     mask: url(../images/icons/vector-11.png) no-repeat center/contain;
     background-color: #ffffff;
+}
+
+.page-title .auto-container {
+    position: relative;
+    z-index: 3;
 }
 
 .page-title h1,
